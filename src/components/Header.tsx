@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { headerProp } from '../interfaces'
 
-const filterArray = ["suv","sedan","estate"];
+const filterArray = ["","suv","sedan","estate"];
 
 function Header({handleFilterQuery}:headerProp) {
   const [isFilterOpen, setIsFilterOpen] = useState<Boolean>(false);
@@ -21,7 +21,7 @@ function Header({handleFilterQuery}:headerProp) {
           {isFilterOpen && <div className="filter-list">
             <ul className="">
                 {filterArray.map((item)=>{
-                    return <li onClick={(event)=>{buttonHandler(item)}}>{item}</li>
+                    return <li onClick={(event)=>{buttonHandler(item)}}>{item == "" ? "all" : item}</li>
                 })}
             </ul>
           </div>}

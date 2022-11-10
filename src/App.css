@@ -120,11 +120,22 @@ li{
     display: none;
   }
   .mobile-cars-section{
-    display: grid;
-    grid-template-columns: repeat(8, 80%);
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
     padding: 1.5rem;
     overflow-x: scroll;
+  }
+  .card{
+    width: 260px;
+  }
+  .image-section{
+    width:auto;
+    padding: 1.2rem 0;
+  }
+  
+  .image{
+    width: 260px;
   }
   .controller-section{
     display: none;
