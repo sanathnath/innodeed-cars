@@ -2,8 +2,10 @@ import React from 'react'
 import icon from '/icons/chevron-small.svg'
 import '../App.css'
 import { car,carInfoProp } from '../interfaces'
+import { useNavigate } from 'react-router-dom'
 
 const CarInfoCard = ({info}:carInfoProp) => {
+  const navigate = useNavigate();
   return (
     <div className='card'>
       <div className='body-type-section'>
@@ -17,7 +19,7 @@ const CarInfoCard = ({info}:carInfoProp) => {
       <img src={info.imageUrl} className='image' />
       </div>
       <div className="option">
-        <div className="">
+        <div className="" onClick={()=>{navigate(`/learn/${info.id}`)}}>
           <span className="">LEARN</span>
           <div className='option-item'>
             <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +28,7 @@ const CarInfoCard = ({info}:carInfoProp) => {
             </svg>
           </div>
         </div>
-        <div className="">
+        <div className="" onClick={()=>{navigate(`/shop/${info.id}`)}}>
           <span className="">SHOP</span>
           <div className="option-item">
           <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">

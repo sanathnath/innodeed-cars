@@ -6,7 +6,7 @@ const ControllerSection = ({handlePage}:handlePage) => {
   return (
     <div className="controller-section">
         <div className="page-buttons">
-          <div className="prev-button" onClick={()=>{handlePage(-1)}}>
+          <div className="prev-button" onClick={()=>{handlePage(-1000)}}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
               <circle
                 cx="20"
@@ -40,7 +40,7 @@ const ControllerSection = ({handlePage}:handlePage) => {
               ></rect>
             </svg>
           </div>
-          <div className="next-button" onClick={()=>{handlePage(1)}}>
+          <div className="next-button" onClick={()=>{handlePage(1000)}}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
               <circle
                 cx="20"
